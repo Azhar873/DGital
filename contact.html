@@ -95,7 +95,7 @@
 
                 <div class="container-xxl py-lg-5 py-3 bg-primary hero-header">
                     <div class="container my-5 py-lg-5 py-3 px-lg-5">
-                        <div class="row g-5 py-lg-5 py-3">
+                        <div class="row g-lg-5 gy-5 py-lg-5 py-3">
                             <div class="col-12 text-center">
                                 <h1
                                     class="text-white animated slideInDown">Contact</h1>
@@ -131,11 +131,15 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-7">
                             <div class="wow fadeInUp" data-wow-delay="0.3s">
-                                <p class="text-center mb-4">The contact form is
-                                    currently inactive. Get a functional and
-                                    working contact form with Ajax & PHP in a
-                                    few minutes. Just copy and paste the files,
-                                    add a little code and you're done.
+                                <p class="text-center mb-4">
+                                    Whether you have a question, a project idea,
+                                    or just want to say hello, we’d love to hear
+                                    from you.
+                                    <strong>Clossy</strong> is here to provide
+                                    you with the support and solutions you need.
+                                    Reach out to us through the form below or
+                                    email us directly — our team is always ready
+                                    to assist you with clarity and care.
                                     <form name="submit-to-google-sheet">
                                         <div class="row g-3">
                                             <div class="col-md-6">
@@ -144,7 +148,8 @@
                                                         class="form-control"
                                                         id="name"
                                                         name="Name"
-                                                        placeholder="Your Name">
+                                                        placeholder="Your Name"
+                                                        required>
                                                     <label for="name">Your
                                                         Name</label>
                                                 </div>
@@ -155,7 +160,8 @@
                                                         class="form-control"
                                                         id="email"
                                                         name="Email"
-                                                        placeholder="Your Email">
+                                                        placeholder="Your Email"
+                                                        required>
                                                     <label for="email">Your
                                                         Email</label>
                                                 </div>
@@ -166,9 +172,11 @@
                                                         class="form-control"
                                                         id="number"
                                                         name="Number"
-                                                        placeholder="Your Phone Number">
+                                                        placeholder="Your Phone Number"
+                                                        required>
                                                     <label
-                                                        for="subject">Your Phone Number</label>
+                                                        for="subject">Your Phone
+                                                        Number</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -177,7 +185,8 @@
                                                         class="form-control"
                                                         id="subject"
                                                         name="Subject"
-                                                        placeholder="Subject">
+                                                        placeholder="Subject"
+                                                        required>
                                                     <label
                                                         for="subject">Subject</label>
                                                 </div>
@@ -189,7 +198,8 @@
                                                         placeholder="Leave a message here"
                                                         id="message"
                                                         name="Message"
-                                                        style="height: 150px"></textarea>
+                                                        style="height: 150px"
+                                                        required></textarea>
                                                     <label
                                                         for="message">Message</label>
                                                 </div>
@@ -211,7 +221,8 @@
             <!-- Contact End -->
 
             <!-- Footer Start -->
-            <footer class="container-fluid bg-primary text-light footer wow fadeIn"
+            <footer
+                class="container-fluid bg-primary text-light footer wow fadeIn"
                 data-wow-delay="0.1s">
                 <div class="container py-lg-5 py-3 px-lg-5">
                     <div class="row g-5">
@@ -300,26 +311,23 @@
                                 Newsletter<span></span>
                             </p>
                             <p>
-                                Type your message or email
+                                Type your email
                             </p>
-                            <form name="submit-to-google-sheet">
+                            <form>
                                 <div class="position-relative w-100 mt-3">
                                     <input
-                                        class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                                        class="form-control border-0 rounded-pill w-100 ps-4 pe-5 footer-newslatter"
                                         type="email"
                                         name="Newslatter"
                                         placeholder="Your Email"
                                         required
                                         style="height: 48px" />
-                                    <button
-                                        type="submit"
-                                        class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
-                                        <i
-                                            class="fa fa-paper-plane text-primary fs-4"></i>
-                                    </button>
+                                    <a href="contact.html"
+                                        class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2 footer-newslatter-btn disabled-link">
+                                        <i class="fa fa-paper-plane text-primary fs-4"></i>
+                                    </a>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>

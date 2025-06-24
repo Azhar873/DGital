@@ -87,33 +87,72 @@
   });
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbzj77ubTdhvtTj7MX8NPRC2Yt2RLbmQCcM1jDJn1sBE1uZ4hkMegIq5Hffem0mKeQ3y/exec";
+
+  const forms = document.querySelectorAll(
+    'form[name="submit-to-google-sheet"]'
+  );
 
 
+  forms.forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-
- document.addEventListener("DOMContentLoaded", function () {
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzj77ubTdhvtTj7MX8NPRC2Yt2RLbmQCcM1jDJn1sBE1uZ4hkMegIq5Hffem0mKeQ3y/exec";
-    
-    const forms = document.querySelectorAll('form[name="submit-to-google-sheet"]');
-
-    forms.forEach((form) => {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then(() => {
-            Swal.fire({
-              title: "Form successfully submitted.",
-              icon: "success",
-              draggable: true
-            });
-            form.reset();
-            console.log("Submitted from:", window.location.href);
-          })
-          .catch((error) => {
-            console.error("Error!", error.message);
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then(() => {
+          Swal.fire({
+            title: "Form successfully submitted.",
+            icon: "success",
+            draggable: true,
           });
-      });
+          form.reset();
+          console.log("Submitted from:", window.location.href);
+        })
+        .catch((error) => {
+          console.error("Error!", error.message);
+        });
     });
   });
+});
+
+$(document).ready(function () {
+  const $footernewsletterInput = $(".footer-newslatter");
+  const $footernewsletterBtn = $(".footer-newslatter-btn");
+  const $bodynewslatterInput = $(".body-newslatter");
+  const $bodynewslatterbtn = $(".body-newslatter-btn");
+
+  // Initial toggle
+  toggleFooterButton();
+  toggleBodyButton();
+
+  // Event listeners
+  $footernewsletterInput.on("input", function () {
+    toggleFooterButton();
+  });
+
+  $bodynewslatterInput.on("input", function () {
+    toggleBodyButton();
+  });
+
+  // Toggle each button separately
+  function toggleFooterButton() {
+    const val = $footernewsletterInput.val()?.trim() || "";
+    if (val === "") {
+      $footernewsletterBtn.addClass("disabled-link");
+    } else {
+      $footernewsletterBtn.removeClass("disabled-link");
+    }
+  }
+
+  function toggleBodyButton() {
+    const val = $bodynewslatterInput.val()?.trim() || "";
+    if (val === "") {
+      $bodynewslatterbtn.addClass("disabled-link");
+    } else {
+      $bodynewslatterbtn.removeClass("disabled-link");
+    }
+  }
+});
+

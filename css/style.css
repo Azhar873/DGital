@@ -23,7 +23,7 @@
 .back-to-top {
   position: fixed;
   display: none;
-  right: 45px;
+  right: 12px;
   bottom: 45px;
   z-index: 99;
 }
@@ -473,7 +473,7 @@ h6,
 
 /*** Footer ***/
 .footer {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   padding-top: 9rem;
   background: url(../img/bg-top.png), url(../img/map.png);
   background-position: center top, center center;
@@ -548,11 +548,17 @@ h6,
   color: var(--secondary);
 }
 
-@media (max-width: 992px) and (min-width:600px) {
+@media (max-width: 992px) and (min-width: 600px) {
   .customize-img {
     width: 100%;
     max-width: 75%;
     margin: 0 auto;
     display: flex;
   }
+}
+
+.disabled-link {
+  pointer-events: none; /* prevents click */
+  opacity: 0.6; /* looks disabled */
+  cursor: not-allowed;
 }
