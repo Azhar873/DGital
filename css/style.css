@@ -566,3 +566,10 @@ h6,
 .contact-link{
   font-size: 13px;
 }
+
+
+.privacy-policy{
+  .heading{
+    color: #6222cc;
+  }
+}
